@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservierung</title>
+</head>
+<body>
+    <header>
+        <h1>Restaurant "Zum Goldenen Hirsch"</h1>
+        <p>Traditionelle Küche seit 1952</p>        
+        <nav aria-label="Hauptnavigation" aria-current="reservierung">
+            <ul>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="index.html">Main</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="reservierung.html">Reservierung</a></li>
+                <li><a href="speisekarte.html">Speisekarte</a></li>
+                <li><a href="ueber-uns.html">Über uns</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="reservierung">
+            <form action="">
+                <fieldset>
+                    <legend>Unsere Reservierung</legend><br>
+                    <label for="datum">Datum:</label>
+                    <input type="date" name="datum" id="datum" min="heute"><br><br>
+                    <label for="uhrzeit">Uhrzeit:</label>
+                    <select name="uhrzeit" id="uhrzeit">
+                        <option value="17">17 Uhr</option>
+                        <option value="18">18 Uhr</option>
+                        <option value="19">19 Uhr</option>
+                        <option value="20">20 Uhr</option>
+                        <option value="21">21 Uhr</option>
+                    </select>
+                    <br><br>
+                    <label for="personenzahl">Personenzahl:</label>
+                    <input type="number" name="personenzahl" id="personenzahl" min="1" max="12">
+                    <br><br>
+
+                    Anlass: <br>
+                    <label>
+                        <input type="radio" name="occasion" value="gemütlich"> Gemütlich
+                    </label><br>
+                    <label>
+                        <input type="radio" name="occasion" value="business"> Business
+                    </label><br>
+                    <label>
+                        <input type="radio" name="occasion" value="feier"> Feier
+                    </label><br>
+                    <label>
+                        <input type="radio" name="occasion" value="romantisch"> Romantisch
+                    </label>
+                    
+                    <br><br>
+
+                    Besondere Wünsche: <br>
+                    <label>
+                        <input type="checkbox" name="preferences[]" value="fensterplatz"> Fensterplatz
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="preferences[]" value="ruhig"> Ruhig
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="preferences[]" value="rollstuhlgerecht"> Rollstuhlgerecht
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="preferences[]" value="kinderstuhl"> Kinderstuhl
+                    </label>
+
+                    <br><br>
+
+                    <label for="allergien">Alllergien/Unverträglichkeiten:</label><br>
+                    <textarea name="allergien" id="allergien" rows="1" cols="" placeholder="alles gut"></textarea>
+
+                    <br><br>
+
+                    <label for="wuensche">weitere Wünsche:</label><br>
+                    <textarea name="wuensche" id="wuensche" rows="8" cols="88" placeholder="alles mögliche"></textarea><br><br>
+
+                    Rechtsliches: <br>
+                    <input type="checkbox" name="agb" id="" required>ABG
+                    <input type="checkbox" name="" id="">Newsletter
+                </fieldset>
+                <br>
+                <button type="submit">Abschicken</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
