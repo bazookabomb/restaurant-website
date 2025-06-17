@@ -1,0 +1,97 @@
+body { 
+    background-color: rgb(217, 218, 179); 
+    color: chocolate;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    font-size: 20px;
+    line-height: 1.6;
+}
+h1 {
+    color: chocolate;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+}
+header p {
+    /* color: coral; */
+    font-size: 20px;
+    font-weight: bold;
+}
+header {
+    background-color: darkorange;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+header a {
+    color: white;
+    text-decoration: none;
+}
+nav ul {
+    display: flex; /* Macht die Navigation horizontal */
+    justify-content: space-around; /* Gleichmäßige Verteilung der Links */
+}
+nav a:hover {
+    background-color: chocolate; /* Ändert die Farbe beim Hover */
+    /*border-radius: 5px; /* Fügt abgerundete Ecken hinzu */
+}
+nav a:active {
+    background-color: darkred;
+}
+[aria-current="page"] {
+    color:chocolate;
+}
+th {
+    padding: 4px;
+    border: 1px solid;
+    background-color: darkorange;
+    color: white;
+}
+td {
+    padding: 4px;
+    border: 1px solid;
+    background-color: bisque;
+}
+tr:nth-child(even) {
+    background-color: rgb(32, 32, 2);
+}
+tr:hover { 
+    background-color: lightblue; 
+}
+table {
+    border-collapse: collapse;
+    /* border: 1px solid; */
+}
+table caption {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+form {
+    /* width: 200px; */
+    /* margin: 0 auto; */
+}
+fieldset {
+    margin-bottom: 4px;
+}
+input, textarea, select {
+    padding: 4px;
+    margin-bottom: 4px;
+}
+label {
+    color: brown;
+    font-size: 17px;
+    font-weight: bold;
+}
+button {
+    font-size: 20px;
+    border: none;
+    padding: 4px;
+    color: brown;
+}
+img {
+    border-radius: 10px;
+}
+meter {
+    width: 100px;
+    height: 20px;
+}

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservierung</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -14,7 +15,7 @@
                 <li><a href="events.html">Events</a></li>
                 <li><a href="index.html">Main</a></li>
                 <li><a href="kontakt.html">Kontakt</a></li>
-                <li><a href="reservierung.html">Reservierung</a></li>
+                <li><a href="reservierung.html" aria-current="page">Reservierung</a></li>
                 <li><a href="speisekarte.html">Speisekarte</a></li>
                 <li><a href="ueber-uns.html">Über uns</a></li>
             </ul>
@@ -40,7 +41,7 @@
                     <input type="number" name="personenzahl" id="personenzahl" min="1" max="12">
                     <br><br>
 
-                    Anlass: <br>
+                    <label for="">Anlass:</label> <br>
                     <label>
                         <input type="radio" name="occasion" value="gemütlich"> Gemütlich
                     </label><br>
@@ -56,7 +57,7 @@
                     
                     <br><br>
 
-                    Besondere Wünsche: <br>
+                    <label for="">Besondere Wünsche:</label> <br>
                     <label>
                         <input type="checkbox" name="preferences[]" value="fensterplatz"> Fensterplatz
                     </label><br>
@@ -80,9 +81,9 @@
                     <label for="wuensche">weitere Wünsche:</label><br>
                     <textarea name="wuensche" id="wuensche" rows="8" cols="88" placeholder="alles mögliche"></textarea><br><br>
 
-                    Rechtsliches: <br>
-                    <input type="checkbox" name="agb" id="" required>ABG
-                    <input type="checkbox" name="" id="">Newsletter
+                    <label for="">Rechtliches:</label> <br>
+                    <input type="checkbox" name="agb" id="agb" required><label for="agb">AGB</label>
+                    <input type="checkbox" name="newsletter" id="newsletter"><label for="newsletter">Newsletter</label> 
                 </fieldset>
                 <br>
                 <button type="submit">Abschicken</button>
