@@ -5,6 +5,16 @@ body {
     padding: 10px;
     font-size: 20px;
     line-height: 1.6;
+
+    display: grid;
+    grid-template-columns: 1fr 200px; /* Hauptinhalt = flexibel, Sidebar = 200px */
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header"
+        "main   aside"
+        "footer footer";
+    min-height: 100vh;
+    gap: 20px; /* Abstand zwischen den Grid-Bereichen */
 }
 h1 {
     color: chocolate;
@@ -13,7 +23,7 @@ h1 {
 }
 header p {
     /* color: coral; */
-    font-size: 20px;
+    font-size: 1.3rem;
     font-weight: bold;
 }
 header {
@@ -22,17 +32,15 @@ header {
     text-decoration: none;
     padding: 10px;
     margin-bottom: 10px;
+
+    grid-area: header;
 }
 header a {
     color: white;
     text-decoration: none;
 }
-nav ul {
-    display: flex; /* Macht die Navigation horizontal */
-    justify-content: space-around; /* Gleichmäßige Verteilung der Links */
-}
 nav a:hover {
-    background-color: chocolate; /* Ändert die Farbe beim Hover */
+    background-color: brown; /* Ändert die Farbe beim Hover */
     /*border-radius: 5px; /* Fügt abgerundete Ecken hinzu */
 }
 nav a:active {
@@ -40,6 +48,10 @@ nav a:active {
 }
 [aria-current="page"] {
     color:chocolate;
+}
+nav li {
+    font-size: 1.2rem;
+    /* padding: 5px; */
 }
 th {
     padding: 4px;
@@ -79,14 +91,30 @@ input, textarea, select {
 }
 label {
     color: brown;
-    font-size: 17px;
+    font-size: 1 rem;
     font-weight: bold;
 }
 button {
-    font-size: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
     border: none;
     padding: 4px;
     color: brown;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Dezenter Schatten */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Weicher Übergang */    
+}
+button:hover {
+    background-color: brown;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Etwas stärkerer Schatten bei Hover */
+    transform: translateY(-2px); /* Leichte Anhebung */
+}
+button:active {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Schatten reduziert bei Aktivierung */
+    transform: translateY(0); /* Rückkehr in die ursprüngliche Position */
 }
 img {
     border-radius: 10px;
@@ -94,4 +122,57 @@ img {
 meter {
     width: 100px;
     height: 20px;
+}
+.main-nav-list {
+    display: flex;
+    list-style: none; /* Entfernt die Aufzählungspunkte */
+    padding: 0; /* Entfernt den Standard-Innenabstand der Liste */
+    justify-content: center;
+    gap: 20px;
+}
+.card-container {
+    display: flex;
+    gap: 16px; /* Abstand zwischen den Karten */
+    flex-wrap: wrap; /* Erlaubt Karten, in die nächste Zeile zu springen */
+    gap: 30px;
+}
+.card {
+    border: 1px solid;
+    background-color: white;
+    padding: 20px;
+}
+main {
+    grid-area: main;
+}
+aside {
+    grid-area: aside;
+}
+footer {
+    grid-area: footer;
+}
+/* Stile für kleinere Bildschirme (Tablets und darunter) */
+@media (max-width: 768px) {
+    /* CSS-Regeln hier drin gelten NUR auf kleinen Bildschirmen! */
+
+    .main-nav-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    body {
+        /* Wir überschreiben das alte Grid-Layout */
+        grid-template-columns: 1fr; /* Nur noch eine Spalte! */
+        grid-template-areas:
+            "header"
+            "main"
+            "aside"
+            "footer";
+    }    
+    h1 {
+        font-size: 24px; /* Kleiner als die Standard-Größe für Desktops */
+    }
+
+    body {
+        font-size: 14px; /* Ggf. den Basis-Text anpassen */
+    }    
 }
