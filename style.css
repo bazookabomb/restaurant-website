@@ -174,5 +174,37 @@ footer {
 
     body {
         font-size: 14px; /* Ggf. den Basis-Text anpassen */
-    }    
+    }
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }        
+}
+.featured {
+    border: 2px solid gold;
+}
+.features-section {
+    padding: 40px 20px;
+    background-color:lightgoldenrodyellow
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+.card-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+h2 {
+    text-align: center;
 }
